@@ -1,6 +1,7 @@
-import { useEffect } from 'react'
 import { getCurrentInstance, useRouter as useRouterTaro } from '@tarojs/taro'
+
 import { Router } from './router'
+import { useEffect } from 'react'
 
 export function useRouter(defaultParams?: any) {
   useEffect(() => {
@@ -11,7 +12,7 @@ export function useRouter(defaultParams?: any) {
     instance.page['routerEmit'] = true
     const originOnUnload = instance.page.onUnload
     instance.page.onUnload = () => {
-      originOnUnload()
+      originOnUnload.bind(instance.page)
       Router.emitBack()
     }
   }, [])

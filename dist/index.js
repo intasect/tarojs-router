@@ -267,7 +267,7 @@ function useRouter(defaultParams) {
     var originOnUnload = instance.page.onUnload;
 
     instance.page.onUnload = function () {
-      originOnUnload();
+      originOnUnload.bind(instance.page);
       Router.emitBack();
     };
   }, []);

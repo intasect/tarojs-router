@@ -68,8 +68,8 @@
     "react": "^16.13.1"
   },
   "dependencies": {
-    "@tarojs/react": "^3.0.10",
-    "@tarojs/taro": "^3.0.16",
+    "@tarojs/react": "^3.0.17",
+    "@tarojs/taro": "^3.0.17",
     "koa-compose": "^4.1.0",
     "react": "^16.13.1"
   },
